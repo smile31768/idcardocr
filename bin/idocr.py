@@ -16,6 +16,11 @@ def idocr(filepath):        # 身份证OCR识别函数，参数为识别图片�
         quit()
     # 百度大脑AI接口识别身份证信息
     request_url = "https://aip.baidubce.com/rest/2.0/ocr/v1/idcard"
+    if not os.path.exists('img'):       # 检查img文件夹存在，不存在新建一个
+        os.mkdir('img')
+        print('去img文件夹放要识别的图片')
+        time.sleep(2)
+        quit()
     # 二进制方式打开图片文件
     f = open(filepath, 'rb')
     img = base64.b64encode(f.read())
