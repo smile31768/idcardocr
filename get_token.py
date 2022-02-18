@@ -1,6 +1,9 @@
 from configparser import ConfigParser
 import requests ,os, time
 config = ConfigParser(allow_no_value=True)
+# 检查img文件夹存在，不存在新建一个
+if not os.path.exists('img'):
+    os.mkdir('img')
 #若不存在config配置，则新建一个
 if not os.path.exists('config.conf'):
     config.add_section('ApplicationInfo')
