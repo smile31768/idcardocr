@@ -11,10 +11,12 @@
 6. 领取后在官网控制台的应用列表里面创建一个应用，复制你的APIKey和SecretKey，填入config.conf文件里<br>
   ```
   [ApplicationInfo]
+  # 在下方填写从百度申请的app信息
   apikey=thisistheapikeyexample
   secretkey=thisisthesecretkeyexample
 
   [token]
+  # 下方access_token自动生成，无需填写
   accesstoken=
   ```
 7. 再次打开get_token.py，将会自动获取并写入access_token
