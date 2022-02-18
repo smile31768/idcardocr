@@ -23,8 +23,8 @@
   # 下方access_token自动生成，无需填写
   accesstoken=
   ```
-7. 再次打开get_token.py，将会自动获取并写入access_token
-8. 将你要识别的身份证图片放入img文件夹，双击run.py，运行完成后将会生成output.xlsx
+7. 再次运行get_token.py，将会自动获取并写入access_token
+8. 将你要识别的身份证图片放入img文件夹，运行run.py，运行完成后将会输出output.xlsx
 
 [^1]:注意：依赖列表可能不完整，如果有缺少的依赖请自行安装
 [^2]:百度一个月提供200次免费调用识别的额度可以领取
