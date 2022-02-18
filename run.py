@@ -1,7 +1,6 @@
 import os,time
 from bin.idocr import idocr
 from bin.csvmod import create_csv,write_csv
-from bin.convert import csv2xlsx
 import pandas as pd
 # 遍历目录文件
 def findAllFile(base):
@@ -17,9 +16,11 @@ def csv2xlsx(csvpath,xlsxpath):
 # main
 csv_head=['姓名','民族','住址','身份证号','生日','性别']
 create_csv(csv_head)            #创建csv文档
+print('开始识别身份证')
 for i in findAllFile('img'):    #遍历img文件夹，识别身份证信息
     idinfo=idocr(i)
-    print(idinfo)
+    if not idinfo==[]:
+        print(idinfo)
     write_csv(idinfo)
     time.sleep(0.5)
 print('正在写入xlsx文件')
