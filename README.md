@@ -2,13 +2,17 @@
 使用百度大脑AI提供的API批量识别身份证信息，并制成Excel表格
 ## 使用方法
 1. 首先，你需要有一个python3的环境
-2. Clone本项目并cd进去<br>
-  `git clone https://github.com/smile31768/idcardocr.git && cd ./idcardocr`
-3. 安装依赖<br>
-  `pip -i http://mirrors.aliyun.com/pypi/simple/ -r requirements.txt`[^1]
+2. Clone本项目并cd进去
+  ```bash
+  git clone https://github.com/smile31768/idcardocr.git && cd ./idcardocr
+  ```
+3. 安装依赖[^1]
+  ```bash
+  pip -i http://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
+  ```
 4. 运行get_token.py，会自动在目录下创建一个config.conf配置文件和img文件夹
 5. 去[百度智能云](https://cloud.baidu.com/product/ocr_cards)官网的文字识别那里注册一个身份证识别[^2]
-6. 领取后在官网控制台的应用列表里面创建一个应用，复制你的APIKey和SecretKey，填入config.conf文件里<br>
+6. 领取后在官网控制台的应用列表里面创建一个应用，复制你的APIKey和SecretKey，填入config.conf文件里
   ```
   [ApplicationInfo]
   # 在下方填写从百度申请的app信息
