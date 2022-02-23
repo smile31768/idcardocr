@@ -14,6 +14,7 @@ def csv2xlsx(csvpath,xlsxpath):
     csv.to_excel(xlsxpath, sheet_name='sheet1',index=False)
 
 # main
+# 检查运行目录
 if not os.path.exists('img'):
     os.mkdir('img')
     print('img文件夹不存在，已新建')
