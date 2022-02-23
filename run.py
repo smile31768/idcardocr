@@ -14,6 +14,15 @@ def csv2xlsx(csvpath,xlsxpath):
     csv.to_excel(xlsxpath, sheet_name='sheet1',index=False)
 
 # main
+if not os.path.exists('img'):
+    os.mkdir('img')
+    print('img文件夹不存在，已新建')
+    time.sleep(2)
+    quit()
+if not os.listdir('img'):
+    print('img文件夹无待识别图片')
+    time.sleep(2)
+    quit()
 fail_count=0
 csv_head=['姓名','民族','住址','身份证号','生日','性别']
 create_csv(csv_head)            #创建csv文档
