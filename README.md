@@ -8,7 +8,7 @@
   ```
 3. 安装依赖[^1]
   ```bash
-  pip -i http://mirrors.aliyun.com/pypi/simple/ -r requirements.txt
+  pip install -i http://mirrors.aliyun.com/pypi/simple/ -r requirements.txt --trusted-host mirrors.aliyun.com
   ```
 4. 运行get_token.py，会自动在目录下创建一个config.conf配置文件和img文件夹
 5. 去[百度智能云](https://cloud.baidu.com/product/ocr_cards)官网的文字识别那里注册一个身份证识别[^2]
