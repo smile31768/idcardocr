@@ -39,5 +39,12 @@ def idocr(filepath):        # 身份证OCR识别函数，参数为识别图片�
             birthday.insert(4,'/')
             birthday.insert(7,'/')
             birthday=''.join(birthday)
-            idresult=[idinfo['words_result']['姓名']['words'],idinfo['words_result']['民族']['words'],idinfo['words_result']['住址']['words'],idinfo['words_result']['公民身份号码']['words'],birthday,idinfo['words_result']['性别']['words']]
+            idresult=[
+                idinfo['words_result']['姓名']['words'],
+                idinfo['words_result']['民族']['words'],
+                idinfo['words_result']['住址']['words'],
+                idinfo['words_result']['公民身份号码']['words'],
+                birthday,
+                idinfo['words_result']['性别']['words']
+            ]
     return (idresult)
